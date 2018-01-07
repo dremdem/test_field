@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test field</title>
+</head>
+<body>
+
+<h5>Divisions:</h5>
+{% for d in division %}
+    <h6>Подразделение {{ d.name }}</h6>
+    <ul>
+    <li>Номер: {{ d.no }}</li>
+    <li>Идентификатор: {{ d.id }}</li>
+    <li>Количество департаментов: {{ d.departments.count}}</li>
+    <li>Количество сотрудников: {{ d.division_amount }} </li>
+    </ul>
+{% endfor %}
+
+</body>
+</html>
